@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> jogodavelha </title>
+    <style>
+        
+        body
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+            .corpo
+            {
+                width: 700px;
+                height: 700px;
+                background-color: black;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+            }
+                .corpo2
+                {
+                    width: 700px;
+                    height: 200px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-around;
+                }
+                    .quadrado
+                    {
+                        cursor: pointer;
+                        width: 200px;
+                        height: 200px;
+                        background-color: rgb(74, 202, 231);
+                        font-size: 120px;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        align-content: center;
+                        justify-items: center;
+                        justify-content: center;
+                    }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="corpo">
+        <div class="corpo2">
+            <div onclick="Marcar('A1');" class="quadrado" id="A1"></div>
+            <div onclick="Marcar('A2');" class="quadrado" id="A2"></div>
+            <div onclick="Marcar('A3');" class="quadrado" id="A3"></div>
+        </div>
+        <div class="corpo2">
+            <div onclick="Marcar('A4');" class="quadrado" id="A4"></div>
+            <div onclick="Marcar('A5');" class="quadrado" id="A5"></div>
+            <div onclick="Marcar('A6');" class="quadrado" id="A6"></div>
+        </div>
+        <div class="corpo2">
+            <div onclick="Marcar('A7');" class="quadrado" id="A7"></div>
+            <div onclick="Marcar('A8');" class="quadrado" id="A8"></div>
+            <div onclick="Marcar('A9');" class="quadrado" id="A9"></div>
+        </div>
+    </div>
+
+</body>
+<script>
+    
+    cliques = 0;
+
+    function Marcar(ID)
+    {
+        if(document.getElementById(ID).innerHTML == "")
+        {
+            cliques = cliques + 1;
+            
+            if (ID=="A1")
+            {
+                if (cliques==1)
+                {
+                    A1.innerHTML = "X"
+                }
+                if (cliques==2)
+                {
+                    A1.innerHTML = "O"
+                    cliques = 0;
+                }
+            }
+            if (ID=="A2")
+            {
+                if (cliques==1)
+                {
+                    A2.innerHTML = "X"
+                }
+                if (cliques==2)
+                {
+                    A2.innerHTML = "O"
+                    cliques = 0;
+                }
+            }
+            if (ID=="A3")
+            {
+                if (cliques==1)
+                {
+                    A3.innerHTML = "X"
+                }
+                if (cliques==2)
+                {
+                    A3.innerHTML = "O"
+                    cliques = 0;
+                }
+            }
+            if (ID=="A4")
+            {
+                if (cliques==1)
+                {
+                    A4.innerHTML = "X"
+                }
+                if (cliques==2)
+                {
+                    A4.innerHTML = "O"
+                    cliques = 0;
+                }
+            }
+            if (ID=="A5")
+            {
+                if (cliques==1)
+                {
+                    A5.innerHTML = "X"
+                }
+                if (cliques==2)
+                {
+                    A5.innerHTML = "O"
+                    cliques = 0;
+                }
+            }
+            if (ID=="A6")
+            {
+                if (cliques==1)
+                {
+                    A6.innerHTML = "X"
+                }
+                if (cliques==2)
+                {
+                    A6.innerHTML = "O"
+                    cliques = 0;
+                }
+            }
+            if (ID=="A7")
+            {
+                if (cliques==1)
+                {
+                    A7.innerHTML = "X"
+                }
+                if (cliques==2)
+                {
+                    A7.innerHTML = "O"
+                    cliques = 0;
+                }
+            }
+            if (ID=="A8")
+            {
+                if (cliques==1)
+                {
+                    A8.innerHTML = "X"
+                }
+                if (cliques==2)
+                {
+                    A8.innerHTML = "O"
+                    cliques = 0;
+                }
+            }
+            if (ID=="A9")
+            {
+                if (cliques==1)
+                {
+                    A9.innerHTML = "X"
+                }
+                if (cliques==2)
+                {
+                    A9.innerHTML = "O"
+                    cliques = 0;
+                }
+            }
+
+            if(A1.innerHTML==A2.innerHTML && A2.innerHTML==A3.innerHTML)
+            {
+                if(A1.innerHTML=="X")
+                {
+                    window.speechSynthesis.speak(new SpeechSynthesisUtterance('O X GANHOU'));
+                }
+                if(A1.innerHTML=="O")
+                {
+                    window.speechSynthesis.speak(new SpeechSynthesisUtterance('O O GANHOU'));
+                }
+            }
+
+            if(A4.innerHTML==A5.innerHTML && A5.innerHTML==A6.innerHTML)
+            {
+                if(A4.innerHTML=="X")
+                {
+                    window.speechSynthesis.speak(new SpeechSynthesisUtterance('O X GANHOU'));
+                    limpar()
+                }
+                if(A4.innerHTML=="O")
+                {
+                    window.speechSynthesis.speak(new SpeechSynthesisUtterance('O O GANHOU'));
+                    limpar()
+                }
+            }
+
+            if(A7.innerHTML==A8.innerHTML && A8.innerHTML==A9.innerHTML)
+            {
+                if(A7.innerHTML=="X")
+                {
+                    window.speechSynthesis.speak(new SpeechSynthesisUtterance('O X GANHOU'));
+                    limpar()
+                }
+                if(A7.innerHTML=="O")
+                {
+                    window.speechSynthesis.speak(new SpeechSynthesisUtterance('O O GANHOU'));
+                    limpar()
+                }
+            }
+
+            if(A1.innerHTML==A5.innerHTML && A5.innerHTML==A9.innerHTML)
+            {
+                if(A1.innerHTML=="X")
+                {
+                    window.speechSynthesis.speak(new SpeechSynthesisUtterance('O X GANHOU'));
+                    limpar()
+                }
+                if(A1.innerHTML=="O")
+                {
+                    window.speechSynthesis.speak(new SpeechSynthesisUtterance('O O GANHOU'));
+                    limpar()
+                }
+            }
+
+            if(A3.innerHTML==A5.innerHTML && A5.innerHTML==A7.innerHTML)
+            {
+                if(A3.innerHTML=="X")
+                {
+                    window.speechSynthesis.speak(new SpeechSynthesisUtterance('O X GANHOU'));
+                    limpar()
+                }
+                if(A3.innerHTML=="O")
+                {
+                    window.speechSynthesis.speak(new SpeechSynthesisUtterance('O O GANHOU'));
+                    limpar()
+                }
+            }
+
+            if(A1.innerHTML==A4.innerHTML && A4.innerHTML==A7.innerHTML)
+            {
+                if(A1.innerHTML=="X")
+                {
+                    window.speechSynthesis.speak(new SpeechSynthesisUtterance('O X GANHOU'));
+                    limpar()
+                }
+                if(A1.innerHTML=="O")
+                {
+                    window.speechSynthesis.speak(new SpeechSynthesisUtterance('O O GANHOU'));
+                    limpar()
+                }
+            }
+
+            if(A2.innerHTML==A5.innerHTML && A5.innerHTML==A8.innerHTML)
+            {
+                if(A2.innerHTML=="X")
+                {
+                    window.speechSynthesis.speak(new SpeechSynthesisUtterance('O X GANHOU'));
+                    limpar()
+                }
+                if(A2.innerHTML=="O")
+                {
+                    window.speechSynthesis.speak(new SpeechSynthesisUtterance('O O GANHOU'));
+                    limpar()
+                }
+            }
+
+            if(A3.innerHTML==A6.innerHTML && A6.innerHTML==A9.innerHTML)
+            {
+                if(A3.innerHTML=="X")
+                {
+                    window.speechSynthesis.speak(new SpeechSynthesisUtterance('O X GANHOU'));
+                    limpar()
+                }
+                if(A3.innerHTML=="O")
+                {
+                    window.speechSynthesis.speak(new SpeechSynthesisUtterance('O O GANHOU'));
+                    limpar()
+                }
+            }
+
+        }        
+    }
+    function limpar()
+    {
+        A1.innerHTML = ""
+        A2.innerHTML = ""
+        A3.innerHTML = ""
+        A4.innerHTML = ""
+        A5.innerHTML = ""
+        A6.innerHTML = ""
+        A7.innerHTML = ""
+        A8.innerHTML = ""
+        A9.innerHTML = ""
+        cliques = 0
+    }
+
+</script>
+</html>
